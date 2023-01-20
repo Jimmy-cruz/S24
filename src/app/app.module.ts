@@ -20,13 +20,16 @@ import { RouterModule } from '@angular/router';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
+import { DialogContentComponent } from './pages/dialog-content/dialog-content.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     DashboardComponent,
-    DialogComponent
+    DialogComponent,
+    DialogContentComponent
   ],
   imports: [
     BrowserModule,
@@ -44,8 +47,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
+  entryComponents:[DialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

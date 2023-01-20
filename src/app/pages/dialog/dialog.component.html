@@ -5,16 +5,21 @@
         <span class="text-[50px] text-white">Angular Material</span>
     </div>
     <div class="p-10 text-[30px]">
-        <form class="example-form">
-            <div class="p-5"><span class="mr-4">1</span>
-                <mat-form-field class="example-full-width">
+        <form class="example-form">           
+            <ol class="list-decimal">
+                <li class="p-5">
+                  <mat-form-field appearance="fill">
                     <mat-label>Cual es tu nombre?</mat-label>
-                    <input matInput placeholder="Ex. Jimmy Cruz">
+                    <input matInput [(ngModel)]="name">
                   </mat-form-field>
-            </div>
-            <div class="p-5"><span class="mr-4">2</span>
-                <button mat-raised-button>Abrir Dialog</button>
-            </div>           
+                </li>
+                <li class="p-5">
+                  <button mat-raised-button (click)="openDialog()">Abrir Dialog</button>
+                </li>
+                <li class="p-5" *ngIf="deporte">
+                  Tu deporte favorito es: <i>{{deporte}}</i>
+                </li>
+              </ol>           
         </form>       
     </div>      
 </div>
