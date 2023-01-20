@@ -19,7 +19,7 @@ export class DialogContentComponent {
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
   ){}
 
-    name = this.data.name;
+    // name = this.data.name;
     
   onNoClick():void{
     this.dialogRef.close();
